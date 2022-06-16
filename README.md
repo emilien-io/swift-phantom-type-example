@@ -12,10 +12,10 @@ Based on a class custom type, we show how we could handle generic bank transfers
 	> Our main class is instantiated using a `CurrencyType` and for that we will be using an enum containing enums but without cases (see below). This is what we call phantom type, instead of creating a value that would differentiate your objects, you use a phantom type that will not be instantiated be used as a marker.
 
 ```
-	enum Currency {
-		enum Dollar {}
-		enum Euro {}
-	}
+enum Currency {
+    enum Dollar {}
+	enum Euro {}
+}
 ```
 
 This way you can create many `BankAccount` that will conform to different APIs based on their custom types.
@@ -47,7 +47,7 @@ accountUSD1.transfer(200, to: accountEUR1)
 // ^- This line won't compile since the `transfer(_, _)`
 //  method only works with accounts with the same `CurrencyType`
 
-accountUSD1.transferUSDEUR(100, to: accountC)
+accountUSD1.transferUSDEUR(100, to: accountEUR1)
 accountUSD1.transferUSDEUR(100, to: accountUSD2)
 // ^- This line won't compile since the `transferUSDEUR(_, _)`
 //  method asks for a destination account in EUR

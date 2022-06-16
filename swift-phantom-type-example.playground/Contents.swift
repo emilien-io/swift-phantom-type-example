@@ -111,7 +111,7 @@ accountUSD1.transfer(200, to: accountUSD2)
 // ^- This line won't compile since the `transfer(_, _)`
 //  method only works with accounts with the same `CurrencyType`
 
-accountUSD1.transferUSDEUR(100, to: accountC)
+accountUSD1.transferUSDEUR(100, to: accountEUR1)
 //accountUSD1.transferUSDEUR(100, to: accountUSD2)
 // ^- This line won't compile since the `transferUSDEUR(_, _)`
 //  method asks for a destination account in EUR
