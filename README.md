@@ -14,7 +14,7 @@ Based on a class custom type, we show how we could handle generic bank transfers
 ```
 enum Currency {
     enum Dollar {}
-	enum Euro {}
+    enum Euro {}
 }
 ```
 
