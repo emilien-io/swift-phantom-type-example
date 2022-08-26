@@ -20,7 +20,7 @@ enum Currency {
 
 This way you can create many `BankAccount` that will conform to different APIs based on their custom types.
 
-> Note: This code has for only purpose of being an example. You could easily make the would thing more generic by checking the type of your object during a transfer, for example `if self is BankAccount<Currency.Dollar>`.
+> Note: This code has for only purpose of being an example. You could easily make the whole thing more generic by checking the type of your object during a transfer, for example `if self is BankAccount<Currency.Dollar>`.
 
 # Going further
 
